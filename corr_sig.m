@@ -49,7 +49,7 @@ vty=n*(1-r_lagy(2,1)^2)/(1+r_lagy(2,1)^2);
 vt=(vtx+vty)/2;
 tt=floor(vt);
 % Two-tailed T-test 
-t_r=abs(r)*sqrt(n-2)/sqrt(1-r^2);
+t_r=sqrt(n-2)*abs(r)/sqrt(1-r^2);
 t_ref=tinv(1-alpha/2,tt);
 if t_r>t_ref
     h=1;
